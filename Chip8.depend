@@ -382,3 +382,30 @@
 
 1549261060 d:\cppproject\chip8\include\sound.h
 
+1549261993 source:d:\cppproject\chip-8-emulator\main.cpp
+	"App.h"
+
+1549259277 d:\cppproject\chip-8-emulator\include\app.h
+	"Config.h"
+	"VM.h"
+
+1549212229 d:\cppproject\chip-8-emulator\include\config.h
+	<SDL2/SDL.h>
+
+1549257290 d:\cppproject\chip-8-emulator\include\vm.h
+	"Config.h"
+	<functional>
+	<SDL2/SDL_mixer.h>
+
+1549262044 source:d:\cppproject\chip-8-emulator\src\app.cpp
+	"App.h"
+	<iostream>
+
+1549253838 source:d:\cppproject\chip-8-emulator\src\vm.cpp
+	"VM.h"
+	<cstdio>
+	<cstring>
+	<cstdlib>
+	<ctime>
+	<cassert>
+
