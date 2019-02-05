@@ -229,17 +229,14 @@ void VM::funcD(Pointer op)
     _register[15] = 0;
     for(int i = 0; i < n; ++i)
     {
-        if(vy + i >= WINDOW_HEIGHT) {
-            puts("???");
-            printf("%d\n", vy + i);
-            break;
-        }
         int st = _I + i;
         for(int j = 0; j < 8; ++j)
         {
-            int o = _gfx[vy + i][vx + j];
-            _gfx[vy + i][vx + j] ^= (_mem[st] >> (7 - j) & 1);
-            if(o == 1 && _gfx[vy + i][vx + j] == 0)
+            int posy = (vy + i) % WINDOW_HEIGHT;
+            int posx = (vx + j) % WINDOW_WIDTH;
+            int o = _gfx[posy][posx];
+            _gfx[posy][posx] ^= (_mem[st] >> (7 - j) & 1);
+            if(o == 1 && _gfx[posy][posx] == 0)
             {
                 _register[15] = 1;
             }
